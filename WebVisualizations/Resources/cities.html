@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <!-- width=device-width sets the width of the page to follow the screen-width of the device -->
     <!-- initial-scale=1 sets the initial zoom level when the page is first loaded-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Personalizing CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
+    <title>WindSpeed Page</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -61,36 +61,32 @@
       </div>
     </nav>
     <!--ARIA role of "main" added for IE11 and lower -->
-    <main class="main">
-    <!-- Customizing Jumbotron component -->
-    <div class="jumbotronL jumbotron-fluid">
+    <main role="main">
+    <!-- Customizing Jumbotron component-->
+    <div class="jumbotron_Comp jumbotron-fluid">
       <div class="container-fluid">
-        <div class = "col-sm-6">
-            <h1 class="display-2">Lattitude</h1>
-            <p class="lead">Latitude Analysis Dashboard with Attitude</p>
-          </div>
+          <h2 class="display-4">Wind Speed</h2>
       </div>
     </div>
     <!--Responsive container---->
-    <div class="container-fluid my-container">
-      <!-- Creating space between columns & aligning them to top -->
+     <!-- Creating space between columns & aligning them to top -->
+        <div class="container-fluid my-MaxTemp_container">
+          <!-- Creating space between columns & aligning them to top -->
         <div class="row justify-content-between align-items-start my-row">
           <!-- Defining first column for medium and small screens ---->
           <!-- If needed change the order number for small screens to exchange columns-->
-            <div class ="col-md-8 col-sm-6 my-col order-md-2">
-                    <!-- Creating a formatted display text-->
-                    <div class = "my-box">
-                      <h3>SUMMARY: LATITUDE VS. X</h3>
-                      <hr class="style-eight"/>
-                      <!-- Responsive image automatically adjust to fit the size of screen-->
-                      <img src="Resources/Latitude_Summary.png" class="feature-img" width = "50%" alt="Landing page picture">
-                          <!-- Formatted text-->
-                          <p><span class="span-text">T</span>he purpose of this project was to analyze how weather changes as we get closer to the equator. 
-                          To accomplish this analysis, we first pulled data from the <strong>OpenWeatherMap</strong> API to assemble a dataset on over 500 cities.</p>
-                          <p>After assembling the dataset, we used <strong>Matplotlib</strong> to plot various aspects of the <strong>weather</strong> vs. <strong>latitude.</strong> 
-                          Factors we looked at included: <strong>temperature, cloudiness, wind speed,</strong> and <strong>humidity</strong>. This site provides the source data and
-                          visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-                    </div>
+            <div class ="col-md-9 col-sm-6 order-md-2">
+            <!-- Responsive image automatically adjust to fit the size of screen-->
+            <img src="Resources/Latitude_WindSpeed.png" class="feature-img" alt="Wind Speed Picture"> 
+                <!-- Formatted text-->
+                <p class = "headline"> Northern Hemisphere more windier than the Southern Hemisphere</p>
+                <p><span class="span-text">W</span> &nbsp; ind Speed is a fundamental atmosphere quantity caused by air moving from high to low pressure <br> 
+                  <strong>Wind Speed</strong> is affected by a number of factors like <strong>pressure gradient</strong>, <strong> Jet streams</strong>, <strong>Rossby waves</strong> 
+                  and local weather conditions <br> This data was collected on <strong>22nd July</strong> which corresponds to peak summer in the
+                  Northern Hemisphere.<br> During the Northern Hemisphere summer, <strong>easterly jets</strong> can form in tropical regions, typically where dry air encounters 
+                  more humid air at high altitudes.<br> As we can see in the figure, <strong>highest wind speed</strong> is observed in the Northern Hemisphere. <br> Summer season is also the onset of 
+                  hurricanes and atmospheric disturbances which result in higher wind speeds in the Northern Hemisphere.
+                </p>
             </div>
             <!-- Defining second column for medium and small screens---->
             <div class ="col-md-3 col-sm-6 my-col order-md-12">
@@ -139,7 +135,9 @@
                     </div>    
                 </div>      
          </div>
-    </div>
+        </div>    
+          
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
